@@ -14,6 +14,7 @@ public List<SelectListItem> GetCountry()
             }
             return aSelectListItems;
         }
+(html helper file .cshtml)
 2) <div class="form-group">
             @Html.LabelFor(model => model.CountryId, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
