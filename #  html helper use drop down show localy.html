@@ -3,6 +3,7 @@
 Example:1
 -----------
 1)Controller Code
+(any one , there are two selectListItem any one use.two technique)
 List<SelectListItem> items = new List<SelectListItem>()
             {
                 new SelectListItem(){Value = "",Text = "Please Select"},
@@ -12,6 +13,15 @@ List<SelectListItem> items = new List<SelectListItem>()
                 new SelectListItem(){Value = "SI",Text = "software Impliment"}
             };
             
+            or-----
+List<SelectListItem>items=new List<SelectListItem>();
+            items.Add(new SelectListItem(){Value = "",Text = "Please Select"});
+            items.Add(new SelectListItem() { Value = "hr", Text = "HumanResource" });
+            items.Add(new SelectListItem() { Value = "SD", Text = "Software Development" });
+            items.Add(new SelectListItem() { Value = "SI", Text = "software Impliment" });
+           
+
+          
 2)Helper Code(.cshtml)
 
 <div class="form-group">
