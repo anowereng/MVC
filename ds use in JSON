@@ -1,0 +1,8 @@
+  DataSet ds = ProductMR.prcGetData("MR", ComId);
+
+            List<Product> json = ds.Tables[0].AsEnumerable().Select(r => new Product
+            {
+                ProdId = r.Field<Int64>("ProdId"),
+                //ProdCatId = r.Field<int>("prodCatId"),
+                ProdName = r.Field<string>("prodName")
+            }).ToList();
