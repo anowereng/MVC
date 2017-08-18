@@ -6,3 +6,4 @@
                 //ProdCatId = r.Field<int>("prodCatId"),
                 ProdName = r.Field<string>("prodName")
             }).ToList();
+   return Json(json, JsonRequestBehavior.AllowGet);
