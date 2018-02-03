@@ -1,0 +1,10 @@
+
+        public JsonResult GetAll()
+        {
+            Product model = new Product();
+            dsList = Product.prcGetDataProduct("Product", ComId);
+            var subCatList = Product.PrcSet(model, dsList);
+            var jsonResult = Json(subCatList, JsonRequestBehavior.AllowGet);
+            jsonResult.MaxJsonLength = int.MaxValue;
+            return jsonResult;
+        }
